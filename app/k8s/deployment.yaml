@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: mlops-app-deployment 
+  name: car-co2-deployment 
 spec:
   replicas: 2 
   selector:
     matchLabels:
-      app: myapp
+      app: car
   template:
     metadata:
       labels:
-        app: myapp
+        app: car
     spec:
       containers:
-      - name: my-ml-app-container
+      - name: car-co2
         image: vigneshchalla/mlops_final:latest
         ports:
         - containerPort: 5000
