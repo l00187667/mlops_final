@@ -16,4 +16,4 @@ def predict():
     return render_template('index.html', prediction_text=f'Predicted CO2 Emission: {prediction[0]:.2f} g/km')
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0')
+    app.run(host='0.0.0.0', port=5000)
