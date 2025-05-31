@@ -1,4 +1,4 @@
-name: CI/CD - Build, Push
+name: CI/CD - Build, Push , deploy
 
 on:
   push:
@@ -38,8 +38,8 @@ jobs:
           file: Dockerfile
           push: true
           tags: |
-            ${{ secrets.DOCKER_HUB_USERNAME }}/mlops_final:latest
-            ${{ secrets.DOCKER_HUB_USERNAME }}/mlops_final:${{ github.sha }}
+            ${{ secrets.DOCKER_HUB_USERNAME }}/car-co2:latest
+            ${{ secrets.DOCKER_HUB_USERNAME }}/car-co2:${{ github.sha }}
 
   deploy-to-minikube:
     runs-on: ubuntu-latest
